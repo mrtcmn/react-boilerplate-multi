@@ -1,0 +1,57 @@
+@import "mixins"
+@import "snippets"
+
+$_BASE: 4px
+
+.sl-border
+  +iteratorOne(1, 10, 1px, border, border, null, solid #000, false)
+
+
+.sl-round
+  +iteratorOne(1, 10, $_BASE, round, border-radius, null, null, false)
+  +iteratorOne(1, 10, $_BASE, round-bl, border-bottom-left-radius, null, null, false)
+  +iteratorOne(1, 10, $_BASE, round-br, border-bottom-right-radius, null, null, false)
+  +iteratorOne(1, 10, $_BASE, round-tl, border-top-left-radius,null, null, false)
+  +iteratorOne(1, 10, $_BASE, round-tr, border-top-right-radius, null, null, false)
+
+
+.theme-dark
+  .sl-elevated
+    +iteratorOne(1, 10, $_BASE, elevated, box-shadow, 0 0, 0px rgba(132 ,132 ,132, 0.19), false)
+.theme-light
+  .sl-elevated
+    +iteratorOne(1, 10, $_BASE, elevated, box-shadow, 0 0, 0px #00000030, false)
+
+.sl-spacing
+  +iteratorOne(1, 10, $_BASE, spacing, margin, 0, null, true)
+  > *
+
+    &:first-of-type
+      margin-left: 0 !important
+    &:last-of-type
+      margin-right: 0 !important
+
+//
+//  usage <div className="sl-margin-10 sl-margin-v-5">j</div>
+//  margin: 40px , and after v-5 means vertical direction top,bottom 20px margin
+//
+
++iteratorMain(1, 10, $_BASE, sl-margin, margin, null, 0, 'b')
++iteratorMain(1, 10, $_BASE, sl-padding, padding, null, 0, "b")
+
++iteratorMain(1, 10, $_BASE, sl-margin-v, margin, null, 0, 'v')
++iteratorMain(1, 10, $_BASE, sl-padding-v, padding, null, 0, "v")
+
++iteratorMain(1, 10, $_BASE, sl-margin-h, margin, null, 0, 'h')
++iteratorMain(1, 10, $_BASE, sl-padding-h, padding, null, 0, "h")
+
+
+.sl-flex
+  +HVCenter()
+  &.sl-grow-items
+    > *
+      flex-grow: 1
+  &.verticalDirection
+    flex-direction: column
+  .spacer
+    flex-grow: 1

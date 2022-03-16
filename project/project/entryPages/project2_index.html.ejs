@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Project 2</title>
+    <meta name="description" content="Project 2">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_ps/apple-touch-icon.png" id="favIconLarge">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_ps/favicon-32x32.png" id="favIconMedium">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_ps/favicon-16x16.png" id="favIconSmall">
+    <link rel="manifest" href="/project2.webmanifest">
+
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0 !important;
+            overflow: hidden;
+        }
+        #root {
+            height: 100%;
+        }
+    </style>
+    <!-- Google Tag Manager -->
+    <script>(function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          'gtm.start':
+            new Date().getTime(), event: 'gtm.js',
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-PFRQRXF');</script>
+    <!-- End Google Tag Manager -->
+</head>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PFRQRXF"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+<body class="theme-light">
+<div id="root"></div>
+
+<!-- Dependencies -->
+<% if (webpackConfig.mode == 'production') { %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.13.0/umd/react.production.min.js"
+            integrity="sha256-32Gmw5rBDXyMjg/73FgpukoTZdMrxuYW7tj8adbN8z4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.13.0/umd/react-dom.production.min.js"
+            integrity="sha256-bjQ42ac3EN0GqK40pC9gGi/YixvKyZ24qMP/9HiGW7w=" crossorigin="anonymous"></script>
+<% } else { %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.13.0/umd/react.development.js"
+            integrity="sha256-H6WQKfZMn1zcp7b+2UxB9XxLgiJkTdDJQwSf8Ky08PM=" crossorigin="anonymous"></script>
+<% } %>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+</body>
+</html>

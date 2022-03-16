@@ -1,0 +1,55 @@
+@mixin iteratorOne( $start, $end, $incrementVal, $selector, $key, $prepend, $append, $isChildItems)
+  @for $i from $start through $end
+    @if $isChildItems == true
+      &.#{$selector}-#{$i} > *
+        #{$key}: $prepend $incrementVal*$i $append
+    @else
+      &.#{$selector}-#{$i}
+        #{$key}: $prepend $incrementVal*$i $append
+
+
+@mixin iteratorMain( $start, $end, $incrementVal, $selector, $key, $prepend, $append, $direction)
+  @for $i from $start through $end
+    .#{$selector}-#{$i}
+      @if $direction == "v"
+        #{$key}-top: $incrementVal*$i
+        #{$key}-bottom: $incrementVal*$i
+      @else if $direction == "h"
+        #{$key}-left: $incrementVal*$i
+        #{$key}-right: $incrementVal*$i
+      @else if $direction == "b"
+        #{$key}: $incrementVal*$i
+      @else
+        #{$key}: $incrementVal*$i $append
+
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%))
+
+  .theme-dark &
+    &::-webkit-scrollbar
+      width:  $size
+      height: $size
+
+    &::-webkit-scrollbar-thumb
+      background: invert($foreground-color)
+
+    &::-webkit-scrollbar-track
+      background: invert($background-color)
+
+    &
+      scrollbar-face-color: invert($foreground-color)
+      scrollbar-track-color: invert( $background-color)
+
+  .theme-light &
+    &::-webkit-scrollbar
+      width:  $size
+      height: $size
+
+    &::-webkit-scrollbar-thumb
+      background: $foreground-color
+
+    &::-webkit-scrollbar-track
+      background: $background-color
+
+    &
+      scrollbar-face-color: $foreground-color
+      scrollbar-track-color: $background-color

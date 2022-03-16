@@ -1,0 +1,24 @@
+
+@function getColor($theme-name, $color)
+  $color: map-get(map-get($themes, $theme-name),$color)
+  @return $color
+
+
+@mixin theme-aware($key, $color,$prepend,$append)
+  @each $theme-name, $theme-color in $themes
+    .theme-#{$theme-name} &
+      #{$key}: $prepend map-get(map-get($themes, $theme-name), $color)$append
+
+@mixin theme-aware-append($key, $color, $append, $filterColor: null, $filterColorValue: null)
+  @if $filterColor == 'rgba'
+    @each $theme-name, $theme-color in $themes
+      .theme-#{$theme-name} &
+        #{$key}: $append rgba(getColor($themes, $theme-name, $color), $filterColorValue )
+  @else if $filterColor == 'lighten'
+    @each $theme-name, $theme-color in $themes
+      .theme-#{$theme-name} &
+        #{$key}: $append lighten(map-get(map-get($themes, $theme-name), $color), $filterColorValue )
+  @else
+    @each $theme-name, $theme-color in $themes
+      .theme-#{$theme-name} &
+        #{$key}: $append map-get(map-get($themes, $theme-name), $color)

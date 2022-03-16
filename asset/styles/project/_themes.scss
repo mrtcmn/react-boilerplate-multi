@@ -1,0 +1,28 @@
+$themes: (
+  light: (
+    mainBackground: #ffffff,
+    primaryGrayBrighter: #efefef,
+    primaryGrayBright: #dcdcdc,
+    primaryGraySofter: #c4c4c4,
+    primaryGray: #757575,
+    primaryGrayDarker: #2d2d2d,
+    primaryGrayBlue: #b5c5cc,
+    primaryBlack: #000000,
+    primaryColor: #003e66,
+    primaryColorVivid: #0270bd,
+    primaryColorVividBright: #00cbf9,
+  ),
+  dark: (
+    mainBackground: #1a1c1d,
+    primaryGrayBrighter: #292929,
+    primaryGrayBright: #565656,
+    primaryGraySofter: #7e7e7e,
+    primaryGray: #a7a5a5,
+    primaryGrayDarker: #c6c6c6,
+    primaryGrayBlue: #b5c5cc,
+    primaryBlack: #e8e4df,
+    primaryColor: #0473c3,
+    primaryColorVivid: #63bdff,
+    primaryColorVividBright: #00cbf9,
+  ),
+);

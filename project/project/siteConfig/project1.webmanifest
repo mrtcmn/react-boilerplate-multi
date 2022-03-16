@@ -1,0 +1,12 @@
+{
+  "name": "Project 1",
+  "short_name": "P-1",
+  "icons": [
+    {
+      "src": "favicon_cyprus/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "display": "standalone"
+}

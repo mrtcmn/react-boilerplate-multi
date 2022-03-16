@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "baseUrl": ".",
+    "jsx": "preserve",
+    "paths": {
+      "@f/*": ["./project/ps_frontend/*"],
+      "@b/*": ["./project/backoffice/*"],
+      "@mobile/*": ["./project/ps_mobile/*"],
+      "@service/*": ["./service/*"],
+      "@asset/*": ["./asset"],
+      "@SComponent/*": ["./component"],
+      "@utils/*": ["./utils"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}

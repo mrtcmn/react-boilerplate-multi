@@ -1,0 +1,77 @@
+@import "../mixins"
+@import "../snippets"
+@import "../normalize"
+@import "../sl_library"
+@import "asset/styles/project/variables"
+@import "asset/styles/project/mixins.extra"
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@600&display=swap')
+
+/*
+/*  Media breakpoint
+$media_SD: 1200px
+$media_T:   1024px
+$media_M:   769px
+
+html
+  font-family: 'Roboto', sans-serif
+  -webkit-font-smoothing: antialiased
+  letter-spacing: -.01125rem
+body
+  height: 100vh
+  height: calc(var(--vh, 1vh) * 100)
+  +NoSelection()
+
+#root
+  +scrollbars(5px, #cecece, #eeeeee)
+  overflow-y: scroll
+  overflow-x: hidden
+.app
+  font-family: 'Roboto', sans-serif
+  -webkit-font-smoothing: antialiased
+
+.site-all
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+.site-main-area
+  margin-top: 100px
+  flex-grow: 1
+  @media screen and ( max-width: $media_M )
+    margin-top: 70px
+.site-container
+  display: flex
+  justify-content: center
+  align-content: center
+.site-wrapper-w
+  width: 1200px
+@media screen and ( max-width: $media_SD )
+  .site-wrapper-w
+    padding-left: 1em
+    padding-right: 1em
+    width: 100%
+.homepage-main
+  +HVCenter()
+  flex-direction: column
+  height: 100vh
+  align-items: center
+  div
+    margin: 10px
+  .page-title
+    color: #db6262
+  .count-container
+    display: flex
+    flex-direction: row
+    align-items: center
+    font-size: 15px
+    font-weight: 500
+    color: black
+    div
+      margin: 0 5px
+    .minus-button
+      border: 1px solid black
+      padding: 5px 10px
+    .plus-button
+      border: 1px solid black
+      padding: 5px 10px
+    .count-text
+      color: red
